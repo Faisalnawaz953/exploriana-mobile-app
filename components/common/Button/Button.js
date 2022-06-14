@@ -1,16 +1,27 @@
 import React from 'react';
-import {View, Text, ActivityIndicator} from 'react-native';
+import {View, Text, ActivityIndicator, TouchableOpacity} from 'react-native';
 import {globalStyles} from '../../../GlobalStyles.styles';
 import {appConstants} from '../../../Constants/AppConstants';
 
 import {styleConstants} from '../../../Constants/StyleConstants';
 import {buttonStyles} from './Button.styles';
 
-export default function Button({outlined, secondary, title, onPress, loading}) {
+export default function Button({
+  outlined,
+  secondary,
+  title,
+  onPress,
+  loading,
+  btnStyle,
+  txtStyle,
+}) {
   return (
-    <View
-      onTouchStart={onPress ? onPress : () => {}}
-      style={buttonStyles(secondary, outlined).small}>
+    <TouchableOpacity
+      onTouchEnd={e => {
+        e.stopPropagation();
+      }}
+      onPress={onPress ? onPress : () => {}}
+      style={[buttonStyles(secondary, outlined).small, btnStyle]}>
       <Text
         style={[
           globalStyles.mediumText,
@@ -21,6 +32,7 @@ export default function Button({outlined, secondary, title, onPress, loading}) {
                 : styleConstants.primaryColor
               : '#fff',
           },
+          txtStyle,
         ]}>
         {loading ? (
           <ActivityIndicator
@@ -38,6 +50,6 @@ export default function Button({outlined, secondary, title, onPress, loading}) {
           appConstants
         )}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }

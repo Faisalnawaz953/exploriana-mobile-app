@@ -13,7 +13,9 @@ export const appBarStyles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 7,
     display: 'flex',
-    justifyContent: 'center',
-    paddingLeft: 20,
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });

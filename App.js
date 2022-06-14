@@ -7,13 +7,10 @@
  */
 
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {View} from 'react-native';
 
-import Login from './screens/Login/Login';
 import Router from './router';
-const AuthStack = createNativeStackNavigator();
+
 const App = () => {
   return (
     <View style={{flex: 1}}>

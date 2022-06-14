@@ -12,7 +12,7 @@ export const textFieldStyles = startIcon =>
     input: {
       paddingLeft: startIcon ? 30 : 5,
       padding: 5,
-      fontSize: 30,
+      fontSize: 20,
       borderBottomColor: styleConstants.primaryColor,
       borderBottomWidth: 2,
       borderBottomEndRadius: 2,

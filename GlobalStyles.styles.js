@@ -3,14 +3,14 @@ import {styleConstants} from './Constants/StyleConstants';
 
 export const globalStyles = StyleSheet.create({
   largeText: {
-    fontSize: 50,
-    fontWeight: '600',
+    fontSize: 40,
+    fontWeight: '500',
 
     shadowColor: '#fff',
     shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 1,
+    shadowOpacity: 0.4,
     color: styleConstants.primaryColor,
-    elevation: 3,
+    elevation: 1,
     fontFamily: styleConstants.fontFamily,
   },
   mediumText: {

@@ -5,4 +5,5 @@ export const styleConstants = {
   errorColor: 'red',
   hyperlink: '#0645AD',
   secondaryColor: '#f88379',
+  black: '#000',
 };
